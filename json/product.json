@@ -1,0 +1,27 @@
+[
+  {
+    "price": "$120",
+    "image": "jean-1.jpg",
+    "productCaption": "Men wear 1"
+  },
+  {
+    "price": "$120",
+    "image": "jean-1.jpg",
+    "productCaption": "Men wear 2"
+  },
+  {
+    "price": "$10",
+    "image": "jean-5.jpg",
+    "productCaption": "Men wear 3"
+  },
+  {
+    "price": "$110",
+    "image": "jean-6.jpg",
+    "productCaption": "Men wear 4"
+  },
+  {
+    "price": "$110",
+    "image": "men-1.jpg",
+    "productCaption": "Men wear 5"
+  }
+]

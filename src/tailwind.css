@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f2f5f7];
+  }
+
+  .slider-container .slider::-webkit-scrollbar {
+    @apply h-4 border-[1px] border-gray-100 bg-gray-300 rounded-md;
+  }
+
+  .slider-container .slider::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .slider-container .slider::-webkit-scrollbar-thumb {
+    @apply outline-1 outline-gray-100 bg-indigo-600 rounded-md w-11 ;
+  }
+}
+
+@layer components {
+  ul.nav-list.open {
+    @apply translate-x-0;
+  }
+
+  ul.nav-list li.nav-item a.nav-link {
+    @apply font-semibold text-xl relative transition-all delay-100;
+  }
+
+  ul.nav-list li.nav-item a.nav-link:hover {
+    @apply text-gray-400;
+  }
+
+  /* ul.nav-list li.nav-item a.nav-link:hover::after {
+    content: "";
+    @apply absolute w-[90%] lg:w-full top-8 bg-red-600 bottom-0 left-0 right-0 h-1 transition-all delay-75 opacity-100;
+  } */
+
+  ul.nav-list li.nav-item a.nav-link.active::after {
+    content: "";
+    @apply absolute w-full top-8 bg-orange-500 bottom-0 left-[0] right-0 h-1;
+  }
+
+  form {
+    @apply flex justify-center items-center;
+  }
+
+  form .form-control {
+    @apply border-2 w-full border-gray-400 rounded-l-md appearance-none p-5 h-[40px] transition-all delay-150;
+  }
+
+  form .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    @apply outline-0 border-[#86b7fe];
+  }
+
+  .slider-container .product-card {
+    @apply bg-white rounded-md shadow-md !w-[32rem] flex-shrink-0 overflow-hidden;
+  }
+
+  .product-container .product-card {
+    @apply bg-white overflow-hidden rounded-md shadow-md;
+  }
+
+  .product-card .product-card-body {
+    @apply p-6 w-full;
+  }
+
+  .product-container .product-card.skeleton .skeleton-img {
+    @apply w-full block h-[25rem];
+  }
+
+  .product-container .product-card .product-image {
+    @apply overflow-hidden relative;
+  }
+
+  .product-container .product-card .product-image.skeleton {
+    @apply w-full block h-[25rem];
+  }
+
+  .product-container .product-card .card-text.skeleton,
+  .product-container .product-card .card-title.skeleton {
+    @apply w-full block h-5 rounded-md shadow-md;
+  }
+
+  .product-container .product-card button.skeleton {
+    @apply py-3 px-6 bg-gray-200 rounded-md w-full h-12 mt-3 shadow-md;
+  }
+
+  .product-image img {
+    @apply object-cover object-center w-full h-[25rem] transition-all hover:scale-105;
+  }
+
+  .product-card .product-card-body p {
+    @apply mt-3;
+  }
+
+  .product-card .product-card-body button.cart-btn {
+    @apply py-3 px-6 bg-violet-600 rounded-md mt-6 w-full active:scale-75 transition-all delay-100 hover:scale-105;
+  }
+
+  .skeleton {
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0)
+    );
+    background-position: left -40px top 0;
+    animation: shine 2.5s ease infinite;
+    @apply bg-[#e2e5e7] bg-no-repeat;
+  }
+
+  @keyframes shine {
+    to {
+      background-position: right -400px top 0;
+    }
+  }
+
+  .slider-container .btns button#btn-next {
+    @apply absolute right-5 top-[50%] -translate-y-[50%];
+  }
+  .slider-container .btns button#btn-prev {
+    @apply absolute left-5 top-[50%] -translate-y-[50%];
+  }
+
+  .slider-container .btns button {
+    @apply h-10 w-10 rounded-full cursor-pointer bg-gray-600 text-white text-xl;
+  }
+}
