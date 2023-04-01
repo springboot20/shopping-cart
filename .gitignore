@@ -3,6 +3,7 @@
 
 #css
 fontawesome-free-6.2.1-web
+/src/tailwind
 
 #eslint
 .hintrc
